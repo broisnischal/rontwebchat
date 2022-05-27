@@ -1,0 +1,242 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: rgb(32, 32, 32);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+.sign-in {
+	background: black;
+	color: white;
+	padding: 10px 25px;
+	font-size: 20px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	margin: 20px;
+}
+#signinpage {
+	display: flex;
+	align-items: center;
+	color: white;
+	justify-content: center;
+	flex-direction: column;
+}
+img {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+}
+/* chat  */
+.chatmain {
+	position: relative;
+	background: white;
+	padding: 20px 20px 0px 20px;
+}
+
+.chatmain h2 {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.msgs {
+	width: 400px;
+	height: 80vh;
+	background-color: white;
+	overflow-y: scroll;
+	padding: 0px;
+}
+
+.msgs::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+	/* display: none; */
+}
+
+.msgs::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+.msgs::-webkit-scrollbar-track {
+	background: #c6c6c6;
+	border-radius: 10px;
+}
+
+/* Handle */
+.msgs::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 10px;
+	height: 10%;
+}
+
+/* Handle on hover */
+.msgs::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+.msg {
+	display: flex;
+	flex-direction: column;
+	width: auto;
+}
+
+.sent {
+	background-color: #000000d7;
+	padding: 5px;
+	margin: 5px;
+	border-radius: 5px 20px 20px 20px;
+	color: white;
+	flex-direction: row-reverse;
+	text-align: end;
+	float: right;
+}
+
+.sent .text {
+	margin-right: 10px;
+}
+
+.received {
+	background: rgb(225, 225, 225);
+	padding: 5px;
+	margin: 5px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	border-radius: 20px 20px 20px 5px;
+
+	float: left;
+}
+.received .text {
+	margin-left: 10px;
+}
+
+input[type='text'] {
+	width: 95%;
+	width: 300px;
+	background: #eee;
+	height: 30px;
+	border-radius: 5px;
+	border: none;
+	outline: none;
+	padding: 10px 20px;
+	margin: 20px 0;
+}
+
+form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.send {
+	flex-grow: 1;
+	background: transparent;
+	outline: none;
+	border: none;
+	background-size: cover;
+	background-position: center;
+	border-radius: 5px;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.send:hover {
+	background-color: rgb(182, 182, 182);
+}
+
+.signout {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	border: none;
+	outline: none;
+}
+@media (max-width: 775px) {
+	.chatmain h2 {
+		text-align: left;
+		margin-bottom: 10px;
+	}
+
+	.signout {
+		top: 5px;
+		right: 5px;
+	}
+	.msgs {
+		width: calc(100% - 20px);
+		margin: 0 auto;
+	}
+	body {
+		padding: 0;
+		margin: 0;
+		background: white;
+	}
+	.chatmain {
+		height: 100%;
+		padding: 0;
+		width: 100%;
+	}
+
+	p {
+		font-size: 20px;
+	}
+	.sent {
+		padding: 10px 10px 0 10px;
+	}
+	.received {
+		padding: 10px 10px 0 10px;
+	}
+	img {
+		height: 35px;
+		margin-top: -10px;
+	}
+
+	input[type='text'] {
+		width: 90%;
+		width: 250px;
+		background: #eee;
+		height: 30px;
+		border-radius: 5px;
+		border: none;
+		outline: none;
+		padding: 10px 20px;
+		margin: 20px 0;
+	}
+}
+
+@media (max-width: 500px) {
+	.chatmain h2 {
+		text-align: center;
+		font-size: 16px;
+	}
+	.signout {
+		right: 20px;
+		top: 2px;
+	}
+	p {
+		font-size: 15px;
+	}
+	.sent {
+		padding: 7px 7px 0 7px;
+	}
+	.received {
+		padding: 7px 7px 0 7px;
+	}
+	img {
+		height: 30px;
+		margin-top: -7px;
+	}
+}
